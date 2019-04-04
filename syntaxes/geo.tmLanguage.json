@@ -1,0 +1,211 @@
+{
+    "name": "language-gmsh",
+    "scopeName": "source.geo",
+    "fileTypes": ["msh","geo","pro"],
+
+    "uuid": "32bd64fa-d60a-4858-a5fc-5164cc49a2b8",
+
+    "patterns":
+    [
+        {
+            "name": "entity.other.document-start.geo",
+            "match": "^---(?= |$)"
+        },
+        {
+            "name": "entity.other.document-end.geo",
+            "match": "^\\.{3}$"
+        },
+        {
+            "include": "#MultipleLineComments"
+        },
+        {
+            "include": "#LineComments"
+        },
+        {
+            "include": "#Strings"
+        },
+        {
+            "include": "#Chars"
+        },
+        {
+            "include": "#Constants"
+        },
+        {
+            "include": "#number"
+        },
+        {
+            "include": "#string_single"
+        },
+        {
+            "include": "#string_double"
+        },
+        {
+            "begin": "\\b(For)\\b\\s*(?:|([a-zA-Z]\\w*)\\s*(In)\\s*)(\\(|\\{)",
+            "beginCaptures":
+            {
+                    "1":{"name": "keyword.other.iteration.geo"},
+                    "2":{"name": "variable.other.geo"},
+                    "3":{"name": "keyword.other.iteration.geo"},
+                    "4":{"name": "punctuation.definition.range.begin.geo"},
+                "comment": "There are two forms: numeric For ( expression : expression : expression ) string based For string In { expression : expression : expression }."
+            },
+            "end": "(\\)|\\})",
+            
+            "endCaptures":
+                {            
+                    "0":{"name": "punctuation.definition.range.end.geo"},
+                    "name": "meta.structure.iteration.geo",
+                    "patterns": 
+                    [
+                        {
+                            "include": "#number"
+                        },
+                        {
+                            "include": "#operator"
+                        },
+                        {
+                            "include": "#string_double"
+                        },
+                        {
+                            "include": "#string_single"
+                        },
+                        {
+                        "match": ":",
+                        "name": "punctuation.separator.range.geo"
+                        }
+                    ]
+                }
+        },
+        {
+            "match": "\\b(EndFor)\\b",
+            "name": "keyword.other.iteration.geo"
+        },
+        {
+            "begin": "\\/\\*",
+            "captures":
+            {
+                "0": {
+                    "name": "punctuation.definition.comment.geo"
+                    }
+            },            
+            "end": "\\*\\/",            
+            "name": "comment.block.geo"                            
+        },
+        {
+            "captures":{
+                "1":{
+                    "name": "punctuation.definition.comment.geo",
+                    "match": "(?<!\\$)(\/\/)(?!\\{).*$\\n?"}                        
+                },
+                "name": "comment.line.number-sign.geo"
+        },
+        {
+            "match" : "(Call|Function|Macro)\\s*([a-zA-Z]\\w*)",
+            "captures":
+            {
+                "1":{
+                "name" : "keyword.other.command.geo"
+                },
+                "2":{
+                "name" : "support.function.geo"
+                }
+            }
+        },
+        {
+            "match" :"\\b(If|ElseIf|Else|EndIf)\\b",
+            "name" : "keyword.control.geo"
+        },
+        {
+            "match": "\\b(Abort|AdaptMesh|Background\\s*Field|Background|Boundary|BoundingBox|BSpline|CatmullRom|Characteristic\\s*Length|CatmullRom|Circle|Coherence|Cohomology|CombinedBoundary|Color|Compound\\s*Line|Compound\\s*Surface|Compound\\s*Volume|CreateTopology|DefineConstant|Delete|Dilate|Draw|Duplicata|Ellipse|Error|Exit|Extrude|Field|Hide|Homology|In|Include|IntersectAniso|Length|Line|Loop|Layers|Merge|Meshes|newl|newll|NewModel|newp|newreg|news|newsl|newv|Order|OptimizeMesh|Periodic|Plane|Plugin|Physical|Point|Progression|Parametric|Recombine|RefineMesh|Return|Rotate|Ruled|Sleep|Spline|StrCat|Structured|Surface|Symmetry|System|Transfinite|Translate|Trimmed|Volume|View)\\b",
+            "name": "keyword.other.command.geo"
+        },        
+        {
+            "match": "\\b(View(?:\\[[a-zA-Z]\\w*\\].)[a-zA-Z]\\w*)\\b",
+            "name" : "keyword.other.setting.geo"
+        },
+        {
+            "match": "\\b(Mesh.[a-zA-Z]\\w*(?:.[a-zA-Z]\\w*)?|General.[a-zA-Z]\\w*(?:.[a-zA-Z]\\w*)?|Geometry.[a-zA-Z]\\w*(?:.[a-zA-Z]\\w*)?|PostProcessing.[a-zA-Z]\\w*|Name|Choices|GmshOption|AutoCheck)\\b",
+            "name": "keyword.other.setting.geo"
+        },
+        {
+            "match": "\\b(Hypot|Rand|Fmod|Fabs|Floor|Exp|Ceil|Modulo|Log|Log10|ArcCos|Acos|Asin|ArcSin|Atan|ArcTan|Atan2|ArcTan2|Ceil|Cos|Cosh|Exp|Fabs|Fmod|Floor|Hypot|Log|Log10|Modulo|Rand|Round|Sqrt|Sin|Sinh|Tan|Tanh)\\b",
+            "name": "support.function.geo"
+        },
+        {
+            "match": "\\b(Printf|Sprintf)\\b",
+            "name": "support.function.string.geo"
+        },
+        {
+            "match": "\\b((?:SkyBlue|SteelBlue|Red1|Red2|Red3|Red4|Yellow1|Yellow2|Yellow3|Yellow4|Blue1|Blue2|Blue3|Blue4|Green1|Green2|Green3|Green4|Goldenrod1|Goldenrod2|Goldenrod3|Goldenrod4|Green|Blue|Black|Yellow|Red|Purple|Grey|Orange|White)(?:\\d\\d)?)\\b",
+            "name": "constant.other.type.geo"
+        },
+        {
+            "match": "\\b(Today|Threshold|MathEval|Box|Min|Pi|SS|VS|TS|ST|VT|TT|SL|VL|TL|SP|VP|TP|Attractor)\\b",
+            "name": "constant.other.type.geo"
+        },
+        {
+            "match": "\\b(Using|With|Bump|TextAttributes)\\b",
+            "name": "keyword.modifier.geo"
+        },
+        {
+            "comment" :"user defined variable",
+            "match"   :"\\b([a-zA-Z_][a-zA-Z0-9_]*)\\b",
+            "name"    :"variable.other.geo"
+        }
+        
+    
+    ],
+    "repository":
+    {
+        "MultipleLineComments": 
+        {
+        "name": "comment.block.geo",
+        "begin": "(/\\*([^*]|[\\r\\n]|(\\*+([^*/]|[\\r\\n])))*)",
+        "end": "(\\*+/)"
+        },
+
+        "LineComments": 
+        {
+            "match": "(//.*)",
+            "captures": {
+                "1": {
+                "name": "comment.line.number-sign.geo"
+                },
+                "2": {
+                "name": "punctuation.definition.comment.line.geo"
+                }
+            }
+        },
+        "Constants": 
+        {
+            "match": "\\b(GMSH_MAJOR_VERSION|GMSH_MINOR_VERSION|GMSH_PATCH_VERSION|MPI_Size|MPI_Rank|Cpu|Memory|TotalMemory|lc|Pi|newp|newl|news|newv|newll|newsl|newreg|(-)?[0-9.]+|(-)?[0-9.]+e(-)?[0-9.]+)\\b",
+            "name": "constant.numeric.geo"
+        },
+              
+        "number":
+        {
+            "comment": "borrowed from textmate book",
+            "match": "-?(?:(?:0|[1-9]\\d*)(?:\\.\\d+)?|\\.\\d+)(?:[eE][+-]?\\d+)?",
+            "name": "constant.numeric.geo"
+        },
+        "operator":
+        {
+            "comment": "Oprator symbols",
+            "match": "\\s*(==|~=|>|>=|<|<=|&|&&|:|\\||\\|\\||\\+|-|\\*|\\.\\*|/|\\./|\\\\|\\.\\\\|\\^|\\.\\^)\\s*",
+            "name": "keyword.operator.symbols.geo"
+        },
+
+        "Strings": 
+        {
+            "name": "string.quoted.double.geo",
+            "match": "\\\"((\\\\\\\")*[^$\\\"])*\\\""
+        },
+
+        "Chars": 
+        {
+            "name": "string.quoted.single.geo",
+            "match": "\\'((\\\\\\')*[^\\'])*\\'"
+        }        
+    }
+
+}    

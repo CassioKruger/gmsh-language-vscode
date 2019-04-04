@@ -1,0 +1,36 @@
+{
+    "name": "language-gmsh",
+	"displayName": "%displayName%",
+	"description": "%description%",
+    "version": "1.0.0",
+    "publisher": "Cassio",
+	"engines": { "vscode": "1.32.3" },
+	
+    "contributes": 
+    {
+        "languages": 
+        [
+            {
+                "id": "gmsh",
+                "extensions": [ ".geo"],
+                "aliases": [ "gmsh","GMSH"],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": 
+        [   
+            {
+                "language": "gmsh",
+                "scopeName": "source.geo",
+                "path": "./syntaxes/geo.tmLanguage.json"
+            }
+        ],
+        "snippets": 
+        [
+            {
+                "language": "gmsh",
+                "path": "./snippets/gmsh.json"
+            }
+        ]
+    }
+}

@@ -1,0 +1,4 @@
+{
+	"displayName": "GMSH and GETDP Language Basics",
+	"description": "Provides snippets, syntax highlighting, bracket matching and folding in GMSH files (.geo and .pro)."
+}

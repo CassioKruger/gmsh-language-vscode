@@ -1,0 +1,152 @@
+{
+
+			"dp":	
+			{ "prefix": "dp", "body":  ["dP+${1:exp}"],"description":"novo ponto"},
+			"dr":	
+			{ "prefix": "dr", "body":  ["dR+${1:exp}"],"description":"nova linha"},
+			"dh":	
+			{ "prefix": "dh", "body":  ["dH+${1:exp}"],"description":"nova superficie"},
+
+			"Acos":	
+			{ "prefix": "Acos", "body":  ["Acos(${1:exp})"],"description":"a"},
+			"Sin": 
+			{ "prefix": "Asin", "body":  "Asin(${1:exp})","description":"a"},
+			"Atan":
+			{ "prefix": "Atan", "body":  "Atan(${1:exp})","description":"a"},
+			"Atan2":
+			{ "prefix": "Atan2", "body": "Atan2(${1:exp})","description":"a"},
+			"Ceil":
+			{ "prefix": "Ceil", "body":  "Ceil(${1:exp})","description":"a"},
+			"cos":
+			{ "prefix": "Cos", "body":  "Cos(${1:exp})","description":"a"},
+			"cosh":
+			{ "prefix": "Cosh", "body":  "Cosh(${1:exp})","description":"a"},
+			"exp":
+			{ "prefix": "Exp", "body":  "Exp(${1:exp})","description":"a"},
+			"fabs":
+			{ "prefix": "Fabs", "body":  "Fabs(${1:exp})","description":"a"},
+			"fmod":
+			{ "prefix": "Fmod", "body":  "Fmod(${1:exp})","description":"a"},
+			"flor":
+			{ "prefix": "Floor", "body":  "Floor(${1:exp})","description":"a"},
+			"hypot":
+			{ "prefix": "Hypot", "body": "Hypot(${1:exp})","description":"a"},
+			"log":
+			{ "prefix": "Log", "body":  "Log(${1:exp})","description":"a"},
+			"log10":
+			{ "prefix": "Log10", "body":  "Log10(${1:exp})","description":"a"},
+			"modulo":
+			{ "prefix": "Modulo", "body":  "Modulo(${1:exp})","description":"a"},
+			"rand":
+			{ "prefix": "Rand", "body":  "Rand(${1:exp})","description":"a"},
+			"round":
+			{ "prefix": "Round", "body": "Round(${1:exp})","description":"a"},
+			"sqrt":
+			{ "prefix": "Sqrt", "body":  "Sqrt(${1:exp})","description":"a"},
+			"sin":
+			{ "prefix": "Sin", "body":  "Sin(${1:exp})","description":"a"},
+			"sinh":
+			{ "prefix": "Sinh", "body":  "Sinh(${1:exp})","description":"a"},
+			"tan":
+			{ "prefix": "Tan", "body":  "Tan(${1:exp})","description":"a"},
+			"tanh":
+			{ "prefix": "Tanh", "body":  "Tanh(${1:exp})","description":"a"},
+			
+
+	
+			"forloop":
+			{ "prefix": "ForLoop", "body":  "For i In {0:${1:n}}\n\t${2:statement}\nEndFor","description":"a"},
+			"ifcond":
+			{ "prefix": "IfCondition", "body":  "If (${1:exp} )\n\t${2:statement}\nEndIf","description":"a"},
+			"eslsif":
+			{ "prefix": "ElseIf", "body":  "ElseIf (${1:exp})","description":"a"},
+			"call":
+			{ "prefix": "Call", "body":  "Call ${1:macro}","description":"a"},
+			
+
+			"printf":
+			{ "prefix": "Printf", "body":  "Printf (${1:exp})","description":"a"},
+			"error":
+			{ "prefix": "Error", "body":  "Error (${1:exp})","description":"a"},
+			"include":
+			{ "prefix": "Include", "body":  "Include ${1:file}","description":"a"},
+			"setname":
+			{ "prefix": "SetName", "body":  "SetName ${1:modelname}","description":"a"},
+			"sleep":   
+			{ "prefix": "Sleep", "body":  "Sleep ${1:exp}","description":"a"},
+			"merge":   
+			{ "prefix": "Merge", "body":  "Merge ${1:filename}","description":"a"},
+			
+			"transfinite_line":
+			{ "prefix": "Transfinite", "body":  "Transfinite Line","description":"a"},
+			"transfinite_surface":
+			{ "prefix": "Transfinite", "body":  "Transfinite Surface","description":"a"},
+			"recombine":
+			{ "prefix": "Recombine", "body":  "Recombine","description":"a"},
+			"line":
+			{ "prefix": "Line", "body":  "Line (${1:exp})","description":"a"},
+			"point":
+			{ "prefix": "Point", "body":  "Point (${1:exp})","description":"a"},
+			"surface":
+			{ "prefix": "Surface", "body":  "Surface (${1:exp})","description":"a"},
+			"volume":
+			{ "prefix": "Volume", "body":  "Volume (${1:exp})","description":"a"},
+			"physical":
+			{ "prefix": "Physical", "body":  "Physical (${1:exp})","description":"a"},
+			"extrude":
+			{ "prefix": "Extrude", "body":  "Extrude (${1:exp})","description":"a"},
+			"gmshmajor":
+			{ "prefix": "GMSH_MAJOR_VERSION", "body":  "GMSH_MAJOR_VERSION","description":"a"},
+			"gmshminor":
+			{ "prefix": "GMSH_MINOR_VERSION", "body":  "GMSH_MINOR_VERSION","description":"a"},
+			"gmshpatch":
+			{ "prefix": "GMSH_PATCH_VERSION", "body":  "GMSH_PATCH_VERSION","description":"a"},
+			"mpisize":
+			{ "prefix": "MPI_Size", "body":  "MPI_Size","description":"a"},
+			"mpirank":
+			{ "prefix": "MPI_Rank", "body":  "MPI_Rank","description":"a"},
+			"cpu":
+			{ "prefix": "Cpu", "body":  "Cpu","description":"a"},
+			"memory":
+			{ "prefix": "Memory", "body":  "Memory","description":"a"},
+			"totalmemory":
+			{ "prefix": "TotalMemory", "body":  "TotalMemory","description":"a"},
+			"pi":
+			{ "prefix": "Pi", "body":  "Pi","description":"a"},
+			"newp":
+			{ "prefix": "newp", "body":  "newp","description":"a"},
+			"newl":
+			{ "prefix": "newl", "body":  "newl","description":"a"},
+			"news":
+			{ "prefix": "news", "body":  "news","description":"a"},
+			"newv":
+			{ "prefix": "newv", "body":  "newv","description":"a"},
+			"newll":
+			{ "prefix": "newll", "body":  "newll","description":"a"},
+			"newsl":
+			{ "prefix": "newsl", "body":  "newsl","description":"a"},
+			"newreg":
+			{ "prefix": "newreg", "body":  "newreg","description":"a"},
+			"delete":
+			{ "prefix": "Delete", "body":  "Delete","description":"a"},
+			"syncmodel":
+			{ "prefix": "SyncModel", "body":  "SyncModel","description":"a"},
+			"newmodel":
+			{ "prefix": "NewModel", "body":  "NewModel","description":"a"},
+			"boundingbox":
+			{ "prefix": "BoundingBox", "body":  "BoundingBox","description":"a"},
+			"setchanged":
+			{ "prefix": "SetChanged", "body":  "SetChanged","description":"a"},
+			"draw":
+			{ "prefix": "Draw", "body":  "Draw","description":"a"},
+			"coherences":
+			{ "prefix": "Coherence", "body":  "Coherence","description":"a"},
+			"return":
+			{ "prefix": "Return", "body":  "Return","description":"a"},
+			"abort":
+			{ "prefix": "Abort", "body":  "Abort","description":"a"},
+			"exit":
+			{ "prefix": "Exit", "body":  "Exit","description":"a"}
+
+	
+}

@@ -1,2 +1,0 @@
-//teste
-include "stdio.h";

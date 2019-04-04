@@ -6,6 +6,12 @@ It matches with .geo and .pro files.
 
 It's an unofficial tool, but pretty useful.
 
+# Screenshots
+![image](https://user-images.githubusercontent.com/32344294/55523612-58e89f00-5660-11e9-9afe-4384739cd4d5.png)
+
+![image](https://user-images.githubusercontent.com/32344294/55523634-6c940580-5660-11e9-879d-53b445ca209d.png)
+
+
 # What is GMSH?
 
 Gmsh is a free 3D finite element mesh generator with a built-in CAD engine and post-processor. Its design goal is to provide a fast, light and user-friendly meshing tool with parametric input and advanced visualization capabilities. Gmsh is built around four modules: geometry, mesh, solver and post-processing. The specification of any input to these modules is done either interactively using the graphical user interface, in ASCII text files using Gmsh's own scripting language (.geo files), or using the C++, C, Python or Julia API.

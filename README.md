@@ -20,10 +20,14 @@ More info at [site](http://gmsh.info/).
 
 ## Installation
 
-To use this GMSH language with VSCode, just clone the folder to
+To use this GMSH language with VSCode ant windows, just clone the folder to the path
 
 ```bash
 C:\Users\Your_User\AppData\Local\Programs\Microsoft VS Code\resources\app\extensions
+```
+For Ububtu, clone the folder to the path
+```bash
+/usr/share/code/resources/app/extensions
 ```
 and enjoy.
 

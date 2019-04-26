@@ -1,6 +1,5 @@
 # gmsh-language-vscode
 GMSH syntax highlighting and snippets for VSCode.
-To use this GMSH language, just clone the folder to C:\Users\Your_User\AppData\Local\Programs\Microsoft VS Code\resources\app\extensions and enjoy.
 
 It matches with .geo and .pro files.
 
@@ -20,7 +19,7 @@ More info at [site](http://gmsh.info/).
 
 ## Installation
 
-To use this GMSH language with VSCode ant windows, just clone the folder to the path
+To use this GMSH language/syntax highlighting with VSCode at windows, just clone the folder to the path
 
 ```bash
 C:\Users\Your_User\AppData\Local\Programs\Microsoft VS Code\resources\app\extensions
@@ -32,4 +31,4 @@ For Ububtu, clone the folder to the path
 and enjoy.
 
 ## References
-I based those codes on [Denis Davydov](https://github.com/davydden) [work](https://github.com/davydden/language-gmsh) to syntax highlight at Atom editor and [SumeetSinha](https://github.com/SumeetSinha) [work](https://github.com/SumeetSinha/gmsh-Tools) to syntax highlight at Sublime Text editor.
+I based those codes on [Denis Davydov](https://github.com/davydden)'s [work](https://github.com/davydden/language-gmsh) to syntax highlight at Atom editor and [SumeetSinha](https://github.com/SumeetSinha)'s [work](https://github.com/SumeetSinha/gmsh-Tools) to syntax highlight at Sublime Text editor.

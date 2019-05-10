@@ -3,7 +3,8 @@ GMSH syntax highlighting and snippets for VSCode.
 
 It matches with .geo and .pro files.
 
-It's an unofficial tool, but pretty useful.
+It's an unofficial tool, but really useful. 
+PS: it looks good only with "One Dark" theme and I don't know why. Send me an email if you have any idea on how to improve it krugercassio@gmail.com
 
 # Screenshots
 ![image](https://user-images.githubusercontent.com/32344294/55523612-58e89f00-5660-11e9-9afe-4384739cd4d5.png)
